@@ -1,0 +1,7 @@
+{
+  "name": "Network Intent Assistant",
+  "description": "Webhooks for a Network Intent Assitant Dialogflow chatbot.",
+  "image": "heroku/python",
+  "repository": "https://github.com/asjacobs92/nia",
+  "keywords": ["python", "dialogflow"]
+}

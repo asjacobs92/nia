@@ -1,0 +1,8 @@
+define intent attIntent:
+  add middlebox('firewall'), middlebox('nat')
+  for client('at&t')
+
+define intent dbIntent:
+  from endpoint('gateway')
+  to   endpoint('database')
+  add  middlebox('dpi')

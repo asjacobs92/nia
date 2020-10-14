@@ -1,0 +1,15 @@
+define intent httpIntent:
+  from  endpoint('gateway')
+  to    endpoint('backend')
+  allow traffic('http')
+  block traffic('udp')
+
+define intent torrentIntent:
+  from  endpoint('gateway')
+  to    endpoint('backend')
+  block traffic('http')
+
+define intent streamingIntent:
+  from  endpoint('gateway')
+  to    endpoint('asjacobs-pc')
+  block flow('streaming')

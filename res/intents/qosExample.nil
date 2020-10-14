@@ -1,0 +1,5 @@
+define intent qosIntent:
+  from endpoint('gateway')
+  to   endpoint('backend')
+  for  client('at&t')
+  with latency('less', '10s'), bandwidth('more', '100mbps'), jitter('none'), loss('less', '1%')

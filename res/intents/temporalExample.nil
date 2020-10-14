@@ -1,0 +1,13 @@
+define intent gamingIntent:
+  from  endpoint('ps4')
+  to    endpoint('gateway')
+  block traffic('all')
+  start hour('22:00')
+  end   hour('18:00')
+
+define intent gamingIntent:
+  from  endpoint('ps4')
+  to    endpoint('gateway')
+  block traffic('all')
+  start date('01/01/2018', 'MM/DD/YYYY')
+  end   date('01/30/2018', 'MM/DD/YYYY')

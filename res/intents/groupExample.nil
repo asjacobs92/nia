@@ -1,0 +1,15 @@
+define intent qosIntent:
+  from  endpoint('gateway')
+  to    endpoint('database')
+  for   client('at&t')
+  add   middlebox('firewall'),
+          middlebox('ids')
+  with  latency('less', '10s'),
+          bandwidth('more', '100mbps'),
+          jitter('none'),
+          loss('less', '1%')
+  start hour('09:00')
+  end   hour('18:00')
+  allow traffic('http'),
+          traffic('udp')
+  block flow('udp', '123')

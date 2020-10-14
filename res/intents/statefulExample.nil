@@ -1,0 +1,9 @@
+/*
+ * In this case, parse states of each target and just hyphenate condisition.
+ * Let deployment process handle semantics of state.
+ */
+define intent idsStateIntent:
+  from middlebox('l-ids')
+  to   endpoint('database')
+  add  middlebox('h-ids')
+  if   state(middlebox('l-ids'), '2-connections-lost')
